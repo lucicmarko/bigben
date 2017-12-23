@@ -1,0 +1,6 @@
+AllCops:
+  Exclude:
+    - '.git-hooks/**/*'
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'public/*'
