@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace 'api', path: '' do
     namespace 'v1', defaults: { format: :json }  do
       resources :posts
+      resources :courses
     end
   end
 end
