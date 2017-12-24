@@ -1,2 +1,1 @@
-json.partial! 'course', collection: @courses, as: :course
-
+json.array! @months, :id, :name

@@ -1,2 +1,2 @@
-json.partial! 'course', collection: @courses, as: :course
+json.partial! 'student', collection: @students, as: :student
 

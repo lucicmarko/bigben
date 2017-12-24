@@ -1,5 +1,5 @@
-json.id course.id
-json.name course.name
-json.description course.description
-json.price course.price
-json.img_url course.img_url
+json.id student.id
+json.first_name student.first_name
+json.last_name student.last_name
+json.address student.address
+json.phone student.phone
