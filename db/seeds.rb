@@ -15,7 +15,7 @@ Month.create!(name: "July")
   c = Course.create!(name: Faker::DrWho.character,
                      description: Faker::Lorem.sentence(3),
                      price: Faker::Number.decimal(2),
-                     img_url: 'http://mathwithgary.weebly.com/uploads/1/0/8/7/108739307/6th-grade-math-website-12_2_orig.jpg')
+                     img_url: 'https://fakeimg.pl/200x200/0000ff/000/')
 
   s = Student.create!(first_name: Faker::Name.first_name, 
                       last_name: Faker::Name.last_name, 
