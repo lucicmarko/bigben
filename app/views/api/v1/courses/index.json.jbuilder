@@ -1,3 +1,2 @@
- json.array! @courses do |course|
-  json.partial! 'course', course: course
-end
+json.partial! 'course', collection: @courses, as: :course
+
