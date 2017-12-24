@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       resources :payments, only: [:index]
       resources :students, only: [:index]
       resources :months, only: [:index]
+
+      post 'authenticate', to: 'authentication#authenticate'
     end
   end
 end
