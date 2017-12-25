@@ -8,13 +8,21 @@ RSpec.describe 'GET /v1/courses', type: :request do
   before { get '/v1/courses', headers: { 'Accept': 'application/vnd' } }
 
   context 'when courses exist' do
-    it 'returns HTTP status 200' do
-      expect(response).to have_http_status 200
+    context 'with valid token' do 
+      it 'returns HTTP status 200' do
+        expect(response).to have_http_status 200
+      end
+
+      it 'returns all courses' do
+        body = JSON.parse(response.body)
+        expect(body.size).to eq(10)
+      end
     end
 
-    it 'returns all courses' do
-      body = JSON.parse(response.body)
-      expect(body.size).to eq(10)
+    context 'without valid token' do
+      it 'returns HTTP status 401' do
+        expect(response).to have_http_status 401
+      end
     end
   end
 end
