@@ -27,6 +27,10 @@ export const routes: Routes = [
             {
                 path: 'student',
                 loadChildren: 'app/student/student.module#StudentModule'
+            },
+            {
+                path: 'course',
+                loadChildren: 'app/course/course.module#CourseModule'
             }
         ]
     },

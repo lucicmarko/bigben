@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-lg-12">
+      <div class="card">
+          <div class="card-header">
+              Courses
+          </div>
+          <div class="card-block">
+              <div class="table-responsive">
+                  <table class="table table-striped table-bordered table-condensed">
+                      <thead>
+                          <tr>
+                              <th class="text-xs-center">ID</th>
+                              <th>Name</th>
+                              <th width="20%" class="text-xs-center">Functions</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let course of courses">
+                              <td class="text-xs-center">
+                                  {{course.id}}
+                              </td>
+                              <td>
+                                  {{course.name}}
+                              </td>
+                              <td class="text-xs-center">
+                                  <button class="btn btn-primary btn-sm" type="button" (click)="viewCourse(course)">
+                                      <i class="fa fa-edit"></i> Edit
+                                  </button>
+                                  <button class="btn btn-danger btn-sm" type="button" (click)="confirmDeleteCourse(course)">
+                                      <i class="fa fa-remove"></i> Remove
+                                  </button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+
+          <!-- <div class="card-footer">
+            <a class="btn btn-primary btn-sm" [routerLink]="['/user', 'create']" routerLinkActive="active"><i class="fa fa-plus-square"></i> Create New User</a>
+        </div> -->
+      </div>
+  </div>
+</div>

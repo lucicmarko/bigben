@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { StudentService } from '../core/student.service';
-import { Student } from '../core/student';
+import { StudentService } from '../common/student.service';
+import { Student } from '../common/student';
 
 @Component({
   selector: 'app-student-list',
@@ -16,16 +16,12 @@ export class StudentListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.getStudent();
-    });
+    this.getStudent();
   }
 
   getStudent() {
-    this.studentService.getAllStudents()
-                        .subscribe((res) => {
-                          this.students = res;
-                          console.log(this.students);
-                        });
+    this.studentService.getAllStudents().subscribe((res) => {
+        this.students = res;
+      });
   }
 }
