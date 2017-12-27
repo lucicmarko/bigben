@@ -1,1 +1,3 @@
-json.array! @months, :id, :name
+json.data do
+  json.array! @months, :id, :name
+end
