@@ -1,2 +1,3 @@
-json.partial! 'payment', collection: @payments, as: :payment
-
+json.data do
+  json.partial! 'payment', collection: @payments, as: :payment
+end
