@@ -33,7 +33,6 @@ module Api
       end
 
       def destroy
-        byebug
         @course.destroy!
         head :no_content
       end
