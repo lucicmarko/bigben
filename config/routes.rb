@@ -5,7 +5,6 @@ Rails.application.routes.draw do
       resources :courses, only: [:index, :show, :create, :update, :destroy]
       resources :payments, only: [:index]
       resources :students, only: [:index, :show, :create, :destroy]
-      resources :months, only: [:index]
 
       post 'authenticate', to: 'authentication#authenticate'
     end
